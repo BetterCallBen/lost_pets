@@ -1,0 +1,11 @@
+<h1>Les pauvres animaux perdus</h1>
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <%= link_to pet_path(pet) do %>
+        <%= pet.name %>, retrouvé le: <%= pet.date %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "j'ai trouvé un animal perdu", new_pet_path %>

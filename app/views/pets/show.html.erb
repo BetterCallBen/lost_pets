@@ -1,0 +1,7 @@
+<h1><%= @pet.name %></h1>
+<p><%= @pet.date %></p>
+<p><%= @pet.address %></p>
+<p><%= @pet.specie %></p>
+<%= link_to "voir la liste", pets_path  %>
+<%= link_to "modifier", edit_pet_path  %>
+<%= link_to "supprimer", destroy_pet_path, data: { turbo_method: :delete, turbo_confirm: "tu vas vraiment laisser cette pauvre dame mourir seule sans son #{@pet.specie} ?" }  %>
